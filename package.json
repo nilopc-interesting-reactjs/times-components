@@ -119,6 +119,8 @@
     "handlebars": "4.0.10",
     "mkdirp": "0.5.1",
     "sort-pkg": "1.1.0",
-    "subcommander": "1.0.0"
+    "subcommander": "1.0.0",
+    "wd": "1.4.1",
+    "webdriverio": "4.8.0"
   }
 }
