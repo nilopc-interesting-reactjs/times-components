@@ -225,6 +225,7 @@ exports[`renders vertical by default 1`] = `
         </Text>
       </Text>
       <Text
+        accessibilityLabel="datePublication"
         accessible={true}
         allowFontScaling={true}
         disabled={false}
@@ -348,6 +349,7 @@ exports[`renders without image 1`] = `
         </Text>
       </Text>
       <Text
+        accessibilityLabel="datePublication"
         accessible={true}
         allowFontScaling={true}
         disabled={false}
@@ -471,6 +473,7 @@ exports[`renders without image url 1`] = `
         </Text>
       </Text>
       <Text
+        accessibilityLabel="datePublication"
         accessible={true}
         allowFontScaling={true}
         disabled={false}
