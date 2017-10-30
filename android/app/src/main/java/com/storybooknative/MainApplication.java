@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import uk.co.news.rntbrightcovevideo.BrightcovePackage;
+import uk.co.news.rnttext.TextTweakPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -26,8 +27,10 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new SvgPackage(), new BrightcovePackage()
+              new MainReactPackage(),
+              new SvgPackage(),
+              new BrightcovePackage(),
+              new TextTweakPackage()
       );
     }
 
