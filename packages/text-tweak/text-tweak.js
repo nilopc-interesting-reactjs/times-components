@@ -554,9 +554,11 @@ const TextTweak = createReactClass({
       };
     }
     if (this.context.isInAParentText) {
-      return <RCTVirtualText {...newProps} />;
+      console.log("RCTVirtualTextTweak", newProps);
+      return <RCTVirtualTextTweak {...newProps} />;
     } else {
-      return <RCTText {...newProps} />;
+      console.log("RCTTextTweak", newProps);
+      return <RCTTextTweak {...newProps} />;
     }
   },
 });
@@ -570,11 +572,11 @@ type RectOffset = {
 
 var PRESS_RECT_OFFSET = {top: 20, left: 20, right: 20, bottom: 30};
 
-var RCTText = createReactNativeComponentClass(viewConfig);
-var RCTVirtualText = RCTText;
+var RCTTextTweak = createReactNativeComponentClass(viewConfig);
+var RCTVirtualTextTweak = RCTTextTweak;
 
 if (Platform.OS === 'android') {
-  RCTVirtualText = createReactNativeComponentClass({
+  RCTVirtualTextTweak = createReactNativeComponentClass({
     validAttributes: mergeFast(ReactNativeViewAttributes.UIView, {
       isHighlighted: true,
     }),

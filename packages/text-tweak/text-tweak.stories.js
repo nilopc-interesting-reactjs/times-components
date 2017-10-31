@@ -5,5 +5,5 @@ import { storiesOf } from "@storybook/react-native";
 import TextTweak from "./text-tweak";
 
 storiesOf("TextTweak", module).add("TextTweak", () => (
-  <TextTweak>Beedy Beedy Beedy</TextTweak>
+  <TextTweak><TextTweak style={{color: "red"}}>Beedy Beedy Beedy</TextTweak></TextTweak>
 ));
