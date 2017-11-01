@@ -12,11 +12,11 @@ beforeAll(async () => {
     desiredCapabilities: {
       browserName: "",
       platformName: "Android",
-      platformVersion: "7.1.1",
+      platformVersion: "5.1",
       deviceName: "Android Emulator",
       app: path.join(
         __dirname,
-        "../android/app/build/outputs/apk/debug/app-debug.apk"
+        "../android/app/build/outputs/apk/release/app-release.apk"
       )
     },
     host: "localhost",
