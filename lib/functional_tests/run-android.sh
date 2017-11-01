@@ -3,10 +3,7 @@
 EMU_PID=$!
 adb wait-for-device
 
-npm run fetch-fonts
-npx rnstl --searchDir ./packages --pattern './*/*.fructose.android.js' --outputFile ./components.js
-
-yarn react-native run-android --variant=release
+yarn react-native run-android
 
 kill -9 $(lsof -ti :8081)
 
@@ -17,6 +14,8 @@ adb reverse tcp:4723 tcp:4723
 appium &
 APPIUM_PID=$!
 
+npm run fetch-fonts
+npx rnstl --searchDir ./packages --pattern './*/*.fructose.android.js' --outputFile ./components.js
 npx compile-tests
 jest .fructose/components.test.js --setupTestFrameworkScriptFile ./.fructose/setup.android.js --forceExit --verbose
 

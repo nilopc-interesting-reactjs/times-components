@@ -16,6 +16,7 @@
     "functional-test:web": "./lib/functional_tests/run-web.sh",
     "functional-test:ios": "./lib/functional_tests/run-ios.sh",
     "functional-test:android": "./lib/functional_tests/run-android.sh",
+    "functional-test:android-saucelabs": "./lib/functional-test/run-android-saucelabs.sh"
     "coverage:publish": "lcov-result-merger ./packages/**/lcov.info | coveralls",
     "prelint": "prettier --list-different '+(.storybook.native|storybook|lib)/**/*.+(js|json)'",
     "lint": "lerna run lint",
@@ -111,7 +112,7 @@
     "react-native-web": "0.1.7",
     "rimraf": "2.6.1",
     "url": "0.11.0",
-    "wd": "1.4.1",    
+    "wd": "1.4.1",
     "webpack": "3.3.0"
   },
   "dependencies": {
@@ -120,6 +121,7 @@
     "global": "4.3.2",
     "handlebars": "4.0.10",
     "mkdirp": "0.5.1",
+    "ngrok": "2.2.23",
     "sort-pkg": "1.1.0",
     "subcommander": "1.0.0"
   }
