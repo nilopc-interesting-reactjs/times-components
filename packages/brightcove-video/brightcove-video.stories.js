@@ -11,6 +11,19 @@ import Player from "./brightcove-player";
 import VideoAdder from "./fixtures/player-adder";
 import VideoWithExternalControls from "./fixtures/video-with-external-controls";
 
+//import ArticleHeadline from '../article-headline/article-headline.android';
+
+const styles = {
+  color: "#1D1D1B",
+  fontSize: 22,
+  lineHeight: 25,
+  //marginBottom: 8,
+  fontFamily: "TimesModern-Bold",
+  //fontWeight: "400"
+  backgroundColor: "red"
+
+};
+
 const policyKey =
   "BCpkADawqM0NK0Rq8n6sEQyWykemrqeSmIQqqVt3XBrdpl8TYlvqN3hwKphBJRnkPgx6WAbozCW_VgTOBCNf1AQRh8KnmXSXfveQalRc5-pyNlSod5XzP99If2U";
 const accountId = "57838016001";
@@ -22,6 +35,18 @@ const playIconURI = "https://i.imgur.com/qvmvjzE.png";
 const firstArgJSONAction = decorateAction([args => [JSON.stringify(args[0])]]);
 
 storiesOf("BrightcoveVideo", module)
+  .add("Text test", () => (
+    <View>
+    <Text style={styles}>Labour MPs urge Jeremy Corbyn to condemn Maduro’s Venezuela regime</Text>
+    <View style={{backgroundColor: "yellow", paddingTop: 100, paddingBottom: 100}}>
+
+      <Text style={{fontFamily: "GillSansMTStd-Medium", fontSize: 20, lineHeight: 60, backgroundColor: "blue", color: "white"}}>
+        Fontsize 20 Lineheight 60 qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM
+        Fontsize 20 Lineheight 60 qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM
+      </Text>
+    </View>
+    </View>
+  ))
   .add("Launcher with default values", () => (
     <BrightcoveVideo
       policyKey={policyKey}
