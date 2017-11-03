@@ -67,6 +67,7 @@
     "@times-components/pagination": "0.10.2",
     "@times-components/provider": "0.14.1",
     "@times-components/tracking": "0.2.1",
+    "@times-components/watermark": "0.0.4",
     "jest-cli": "20.0.4",
     "lodash.get": "4.4.2",
     "lodash.merge": "4.6.0",

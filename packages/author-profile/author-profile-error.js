@@ -1,6 +1,7 @@
 import React from "react";
+import Watermark from "@times-components/watermark";
 import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
-import Background from "./author-profile-error-background"
+
 
 const styles = StyleSheet.create({
   container: {
@@ -10,6 +11,10 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 100
+  },
+  contentContainer: {
+    alignItems: "center",
+    maxWidth: 256
   },
   title: {
     color: "#1d1d1b",
@@ -43,7 +48,7 @@ const styles = StyleSheet.create({
     opacity: 0.9,
     color: "#fff"
   },
-  image: {
+  background: {
     bottom: 0,
     position: "absolute",
     right: 0
@@ -52,12 +57,16 @@ const styles = StyleSheet.create({
 
 const AuthorProfileError = () => (
   <View style={styles.container}>
-    <Background style={styles.image}/>
-    <Text style={styles.title}>Something’s gone wrong</Text>
-    <Text style={styles.description}>We can’t load the page you have requested. Please check your network connection and retry to continue</Text>
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonLabel}>RETRY</Text>
-    </TouchableOpacity>
+    <View style={styles.background}>
+      <Watermark width={800} height={400} />
+    </View>
+    <View style={styles.contentContainer}>
+      <Text style={styles.title}>Something’s gone wrong</Text>
+      <Text style={styles.description}>We can’t load the page you have requested. Please check your network connection and retry to continue</Text>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonLabel}>RETRY</Text>
+      </TouchableOpacity>
+    </View>
   </View>
 );
 
