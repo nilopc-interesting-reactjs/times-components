@@ -56,7 +56,7 @@
     "prettier": "1.7.0",
     "react": "16.0.0",
     "react-dom": "16.0.0",
-    "react-native": "git://github.com/dickie81/react-native.git#0.49-stable-android-typo",
+    "react-native": "git://github.com/react-native-letter-spacing/react-native.git#feature-letter-spacing-android",
     "react-native-web": "0.1.7",
     "react-test-renderer": "16.0.0",
     "webpack": "3.3.0"
@@ -70,7 +70,7 @@
   "peerDependencies": {
     "react": ">=16",
     "react-dom": ">=16",
-    "react-native": "git://github.com/dickie81/react-native.git#0.49-stable-android-typo"
+    "react-native": "git://github.com/react-native-letter-spacing/react-native.git#feature-letter-spacing-android"
   },
   "_timesComponentsCliVariables": {
     "component": "BrightcoveVideo",
