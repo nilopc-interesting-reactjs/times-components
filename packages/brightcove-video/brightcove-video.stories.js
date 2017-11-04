@@ -40,7 +40,7 @@ storiesOf("BrightcoveVideo", module)
     <Text style={styles}>Labour MPs urge Jeremy Corbyn to condemn Maduro’s Venezuela regime</Text>
     <View style={{backgroundColor: "yellow", paddingTop: 100, paddingBottom: 100}}>
 
-      <Text style={{fontFamily: "GillSansMTStd-Medium", fontSize: 20, lineHeight: 60, backgroundColor: "blue", color: "white"}}>
+      <Text style={{fontFamily: "GillSansMTStd-Medium", fontSize: 20, lineHeight: 60, letterSpacing: 20, backgroundColor: "blue", color: "white"}}>
         Fontsize 20 Lineheight 60 qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM
         Fontsize 20 Lineheight 60 qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM
       </Text>

@@ -144,7 +144,7 @@ repositories {
 }
 
 dependencies {
-    implementation project(':react-native-svg')
+    //implementation project(':react-native-svg')
     implementation project(path: ':rntbrightcovevideo')
     //implementation "com.facebook.react:react-native:*"  // From node_modules
     implementation project(':ReactAndroid')
