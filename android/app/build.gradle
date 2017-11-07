@@ -144,8 +144,8 @@ repositories {
 }
 
 dependencies {
-    implementation project(':react-native-svg')
-    implementation project(path: ':rntbrightcovevideo')
+    //implementation project(':react-native-svg')
+    //implementation project(path: ':rntbrightcovevideo')
     //implementation "com.facebook.react:react-native:*"  // From node_modules
     implementation project(':ReactAndroid')
     implementation 'com.facebook.stetho:stetho:1.5.0'

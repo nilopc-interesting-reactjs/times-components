@@ -10,6 +10,7 @@ import Player from "./brightcove-player";
 
 import VideoAdder from "./fixtures/player-adder";
 import VideoWithExternalControls from "./fixtures/video-with-external-controls";
+import LineHeightTester from "./LineHeightTester.js";
 
 //import ArticleHeadline from '../article-headline/article-headline.android';
 
@@ -35,6 +36,7 @@ const playIconURI = "https://i.imgur.com/qvmvjzE.png";
 const firstArgJSONAction = decorateAction([args => [JSON.stringify(args[0])]]);
 
 storiesOf("BrightcoveVideo", module)
+  .add("LineHeightTester", () => <LineHeightTester/>)
   .add("Text test", () => (
     <View>
     <Text style={styles}>Labour MPs urge Jeremy Corbyn to condemn Maduro’s Venezuela regime</Text>
