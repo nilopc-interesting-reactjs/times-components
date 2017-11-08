@@ -5,10 +5,10 @@ import StylePropTypes from "react-style-proptype";
 
 const lineHeightStyle = Platform.select({
   ios: {
-    lineHeight: 16
+    lineHeight: 18
   },
   android: {
-    lineHeight: 20
+    lineHeight: 22
   },
   web: {
     lineHeight: 17
@@ -21,12 +21,13 @@ const defaultStyle = StyleSheet.create({
   },
   text: {
     fontFamily: "GillSansMTStd-Medium",
-    fontSize: 13,
+    fontSize: 16,
     color: "#696969",
     ...lineHeightStyle
   },
   credits: {
-    fontSize: 9,
+    paddingTop: 3,
+    fontSize: 11,
     color: "#333",
     letterSpacing: 1,
     fontWeight: "400",
