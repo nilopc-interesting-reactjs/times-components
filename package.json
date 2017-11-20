@@ -107,14 +107,15 @@
     "react": "16.0.0",
     "react-dom": "16.0.0",
     "react-native": "0.50.1",
+    "react-native-linear-gradient": "2.3.0",
     "react-native-storybook-loader": "1.5.1",
     "react-native-web": "0.1.7",
-    "react-native-linear-gradient": "2.3.0",
     "rimraf": "2.6.1",
     "url": "0.11.0",
     "webpack": "3.3.0"
   },
   "dependencies": {
+    "babel-jest": "21.2.0",
     "babel-plugin-transform-class": "0.3.0",
     "dashify": "0.2.2",
     "global": "4.3.2",
