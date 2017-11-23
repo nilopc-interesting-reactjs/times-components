@@ -21,39 +21,41 @@ const listViewPageSize = 1;
 const listViewSize = 10;
 const listViewScrollRenderAheadDistance = 10;
 
-const withAdComposer = (children, section = "article") => (
+export const withAdComposer = (children, section = "article") => (
   <AdComposer section={section}>{children}</AdComposer>
 );
 
 class ArticlePage extends React.Component {
   static renderRow(rowData) {
-    if (rowData.type === "leadAsset") {
-      return (
+
+    switch(rowData.type) {
+      case "leadAsset": return (
         <View testID="leadAsset" style={styles.leadAsset}>
           <Image uri={rowData.data.crop.url} aspectRatio={16 / 9} />
         </View>
       );
-    } else if (rowData.type === "header") {
-      const { headline, flags, standfirst, label } = rowData.data;
-      return (
-        <ArticleHeader
-          headline={headline}
-          flags={flags}
-          standfirst={standfirst}
-          label={label}
-        />
-      );
-    } else if (rowData.type === "middleContainer") {
-      const { byline, publishedTime, publicationName } = rowData.data;
-      return (
-        <ArticleMeta
-          byline={byline}
-          publishedTime={publishedTime}
-          publicationName={publicationName}
-        />
-      );
-    } else if (rowData.type === "articleBodyRow") {
-      return (
+      case "header": {
+        const { headline, flags, standfirst, label } = rowData.data;
+        return (
+          <ArticleHeader
+            headline={headline}
+            flags={flags}
+            standfirst={standfirst}
+            label={label}
+          />
+        );
+      }
+      case "middleContainer": {
+        const { byline, publishedTime, publicationName } = rowData.data;
+        return (
+          <ArticleMeta
+            byline={byline}
+            publishedTime={publishedTime}
+            publicationName={publicationName}
+          />
+        );
+      }
+      default: return (
         <View>
           {renderTrees([rowData.data], {
             paragraph(key, attributes, children) {
@@ -87,8 +89,6 @@ class ArticlePage extends React.Component {
         </View>
       );
     }
-
-    return null;
   }
 
   constructor(props) {
