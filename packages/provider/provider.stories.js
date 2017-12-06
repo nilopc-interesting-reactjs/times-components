@@ -4,7 +4,7 @@ import { Text } from "react-native";
 import { addTypenameToDocument } from "apollo-utilities";
 import gql from "graphql-tag";
 import { MockedProvider } from "@times-components/utils/graphql";
-import { storiesOf } from "../../storybook/storiesOfOverloader";
+import { storiesOf } from "@times-components/utils/storybook";
 import connectGraphql, {
   AuthorProfileProvider,
   ArticleProvider

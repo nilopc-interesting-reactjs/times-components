@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import { storiesOf } from "../../storybook/storiesOfOverloader";
+import { storiesOf } from "@times-components/utils/storybook";
 import Card from "./card";
 import props from "./fixtures/card-props.json";
 import LateralSpacingDecorator from "../../storybook/decorators/lateral-spacing";

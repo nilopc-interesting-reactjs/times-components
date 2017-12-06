@@ -1,5 +1,5 @@
 import React from "react";
-import { storiesOf } from "../../storybook/storiesOfOverloader";
+import { storiesOf } from "@times-components/utils/storybook";
 import BrightcoveVideo from "./brightcove-video";
 
 const policyKey =

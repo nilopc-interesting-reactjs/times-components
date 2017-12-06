@@ -37,7 +37,8 @@
     "eslint-plugin-react": "7.4.0",
     "mkdirp": "0.5.1",
     "node-fetch": "1.7.2",
-    "prettier": "1.8.2"
+    "prettier": "1.8.2",
+    "@storybook/react-native": "3.2.11"    
   },
   "dependencies": {
     "apollo-cache-inmemory": "1.1.1",

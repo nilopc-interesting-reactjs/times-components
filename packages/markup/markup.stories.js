@@ -3,7 +3,7 @@
 import { AdComposer } from "@times-components/ad";
 import { View, Text, Platform, ScrollView } from "react-native";
 import React from "react";
-import { storiesOf } from "../../storybook/storiesOfOverloader";
+import { storiesOf } from "@times-components/utils/storybook";
 import { renderTree, renderTrees } from "./markup";
 import CenteredDecorator from "../../storybook/decorators/centered";
 

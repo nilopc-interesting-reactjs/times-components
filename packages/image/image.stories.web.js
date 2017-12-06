@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import { View } from "react-native";
-import { storiesOf } from "../../storybook/storiesOfOverloader";
+import { storiesOf } from "@times-components/utils/storybook";
 import Image from "./image";
 
 const squareUri =

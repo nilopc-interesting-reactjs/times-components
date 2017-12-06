@@ -1,5 +1,6 @@
 #!/bin/bash
 xcrun simctl boot 'iPhone 7'
+npx lerna run dextrose-clean # just in case it didn't clean up last time
 npx lerna run dextrose-stories --since
 npm run fetch-fonts
 npx rnstl --searchDir ./packages --pattern './*/*.dextrose.tmp.js' --outputFile ./fructose/components.js

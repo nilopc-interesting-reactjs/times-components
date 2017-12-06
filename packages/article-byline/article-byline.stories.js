@@ -1,5 +1,5 @@
 import React from "react";
-import { storiesOf } from "../../storybook/storiesOfOverloader";
+import { storiesOf } from "@times-components/utils/storybook";
 import ArticleByline from "./article-byline";
 
 const authorsAST = require("./fixtures/authors.json");
