@@ -30,6 +30,16 @@ describe("TealiumSendScheduler", () => {
       utags.forEach(utag => utag.remove());
     });
 
+    it("throws if a tealium option is not provided", () => {
+      // eslint-disable-next-line no-new
+      expect(
+        () =>
+          new TealiumSendScheduler({
+            enabled: true
+          })
+      ).toThrow();
+    });
+
     it("injects utag script", () => {
       // eslint-disable-next-line no-new
       new TealiumSendScheduler(
@@ -55,6 +65,7 @@ describe("TealiumSendScheduler", () => {
         global.window,
         global.window.document
       );
+
       expect(
         global.window.document.querySelectorAll('script[src*="utag.js"]').length
       ).toBe(1);
@@ -63,7 +74,7 @@ describe("TealiumSendScheduler", () => {
     it("does not inject utag when tracking is not enabled", () => {
       // eslint-disable-next-line no-new
       new TealiumSendScheduler(
-        Object.assign(trackingOptions, { enabled: false })
+        Object.assign({}, trackingOptions, { enabled: false })
       );
       expect(
         global.window.document.querySelector('script[src*="utag.js"]')
@@ -78,6 +89,31 @@ describe("TealiumSendScheduler", () => {
         global.window.document
       );
       expect(global.window.utag_cfg_ovrd.noview).toBe(true);
+    });
+
+    it("sets the scriptLoaded flag to true", () => {
+      // eslint-disable-next-line no-new
+      new TealiumSendScheduler(
+        trackingOptions,
+        global.window,
+        global.window.document
+      );
+      global.window.document.querySelector('script[src*="utag.js"]').onload();
+
+      expect(TealiumSendScheduler.scriptLoaded).toBe(true);
+    });
+
+    it("schedules events when the utag script is loaded", () => {
+      // eslint-disable-next-line no-new
+      const tss = new TealiumSendScheduler(
+        trackingOptions,
+        global.window,
+        global.window.document
+      );
+      const spy = jest.spyOn(tss, "scheduleSendEvents");
+      global.window.document.querySelector('script[src*="utag.js"]').onload();
+
+      expect(spy).toHaveBeenCalled();
     });
   });
 
