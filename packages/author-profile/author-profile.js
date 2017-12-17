@@ -2,13 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import AuthorHead from "@times-components/author-head";
 import { withPageState } from "@times-components/pagination";
-import { ArticleListProvider } from "@times-components/provider";
+import { AuthorArticlesWithImagesProvider } from "@times-components/provider";
 import { withTrackingContext } from "@times-components/tracking";
 import get from "lodash.get";
+import AuthorArticlesNoImagesProvider from "./author-profile-list-provider";
 import AuthorProfileError from "./author-profile-error";
 import AuthorProfileContent from "./author-profile-content";
 
 const ratioTextToFloat = s => {
+  if (!s || !s.length) {
+    return 1;
+  }
+
   const [w, h] = s.split(":");
   const ratio = parseFloat(w) / parseFloat(h);
 
@@ -31,11 +36,36 @@ const AuthorProfile = ({
     return <AuthorProfileError {...error} />;
   }
 
-  const { biography, name, image: uri, jobTitle, twitter, articles } =
+  if (isLoading) {
+    return (
+      <AuthorProfileContent
+        isLoading={isLoading}
+        showImages
+        pageSize={initPageSize}
+        imageRatio={ratioTextToFloat("3:2")}
+        articlesLoading
+        onTwitterLinkPress={() => {}}
+      />
+    );
+  }
+
+  const {
+    biography,
+    name,
+    image: uri,
+    jobTitle,
+    twitter,
+    hasLeadAssets,
+    articles
+  } =
     author || {};
 
+  const SelectedProvider = hasLeadAssets
+    ? AuthorArticlesWithImagesProvider
+    : AuthorArticlesNoImagesProvider;
+
   return (
-    <ArticleListProvider
+    <SelectedProvider
       articleImageRatio="3:2"
       slug={slug}
       page={page}
@@ -45,7 +75,7 @@ const AuthorProfile = ({
         author: data,
         pageSize,
         isLoading: articlesLoading,
-        variables: { imageRatio }
+        variables: { imageRatio = "3:2" }
       }) => {
         const articlesWithPublishTime = get(data, "articles.list", []).map(
           article => ({
@@ -72,13 +102,14 @@ const AuthorProfile = ({
             page={page}
             pageSize={pageSize}
             imageRatio={ratioTextToFloat(imageRatio)}
+            showImages={hasLeadAssets}
             articlesLoading={articlesLoading}
             articles={articlesWithPublishTime}
             onArticlePress={onArticlePress}
           />
         );
       }}
-    </ArticleListProvider>
+    </SelectedProvider>
   );
 };
 

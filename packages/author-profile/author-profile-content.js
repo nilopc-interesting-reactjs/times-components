@@ -72,7 +72,8 @@ class AuthorProfileContent extends React.Component {
       pageSize,
       twitter,
       uri,
-      imageRatio
+      imageRatio,
+      showImages
     } = this.props;
 
     const paginationComponent = (hideResults = false) => (
@@ -114,6 +115,7 @@ class AuthorProfileContent extends React.Component {
                   {...item}
                   imageRatio={imageRatio}
                   imageSize={this.state.width}
+                  showImage={showImages}
                   style={styles.padding}
                   testID={`articleList-${index}`}
                   onPress={e =>
