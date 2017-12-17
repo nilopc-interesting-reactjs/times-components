@@ -5,8 +5,8 @@ import { AuthorProfileProvider } from "@times-components/provider";
 import { MockedProvider } from "@times-components/utils/graphql";
 // eslint-disable-next-line import/no-unresolved
 import { addTypenameToDocument } from "apollo-utilities";
-import { query as authorProfileQuery } from "@times-components/provider/author-profile-provider";
-import { query as articleListQuery } from "@times-components/provider/article-list-provider";
+import { query as authorProfileQuery } from "@times-components/provider/author-profile";
+import { query as articleListWithImagesQuery } from "@times-components/provider/author-articles-with-images";
 import storybookReporter from "@times-components/tealium/storybook";
 import AuthorProfile from "./author-profile";
 import AuthorProfileContent from "./author-profile-content";
@@ -57,7 +57,7 @@ const mocks = [
   {
     delay,
     request: {
-      query: addTypenameToDocument(articleListQuery),
+      query: addTypenameToDocument(articleListWithImagesQuery),
       variables: {
         slug: "deborah-haynes",
         first: 5,
@@ -70,7 +70,7 @@ const mocks = [
   {
     delay,
     request: {
-      query: addTypenameToDocument(articleListQuery),
+      query: addTypenameToDocument(articleListWithImagesQuery),
       variables: {
         slug: "deborah-haynes",
         first: 5,
@@ -83,7 +83,7 @@ const mocks = [
   {
     delay,
     request: {
-      query: addTypenameToDocument(articleListQuery),
+      query: addTypenameToDocument(articleListWithImagesQuery),
       variables: {
         slug: "deborah-haynes",
         first: 5,
@@ -96,7 +96,7 @@ const mocks = [
   {
     delay,
     request: {
-      query: addTypenameToDocument(articleListQuery),
+      query: addTypenameToDocument(articleListWithImagesQuery),
       variables: {
         slug: "deborah-haynes",
         first: 5,
@@ -121,7 +121,7 @@ const brokenMocks = [
   {
     delay,
     request: {
-      query: addTypenameToDocument(articleListQuery),
+      query: addTypenameToDocument(articleListWithImagesQuery),
       variables: {
         slug: "deborah-haynes",
         first: 5,

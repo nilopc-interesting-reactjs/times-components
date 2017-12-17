@@ -7,8 +7,8 @@ import renderer from "react-test-renderer";
 import { MockedProvider } from "@times-components/utils/graphql";
 // eslint-disable-next-line import/no-unresolved
 import { addTypenameToDocument } from "apollo-utilities";
-import { query as authorProfileQuery } from "@times-components/provider/author-profile-provider";
-import { query as articleListQuery } from "@times-components/provider/article-list-provider";
+import { query as authorProfileQuery } from "@times-components/provider/author-profile";
+import { query as articleListWithImagesQuery } from "@times-components/provider/author-articles-with-images";
 import set from "lodash.set";
 import cloneDeep from "lodash.clonedeep";
 import AuthorProfile from "../author-profile";
@@ -39,7 +39,7 @@ const mocks = [
   },
   {
     request: {
-      query: addTypenameToDocument(articleListQuery),
+      query: addTypenameToDocument(articleListWithImagesQuery),
       variables: {
         slug: "deborah-haynes",
         first: 3,
@@ -51,7 +51,7 @@ const mocks = [
   },
   {
     request: {
-      query: addTypenameToDocument(articleListQuery),
+      query: addTypenameToDocument(articleListWithImagesQuery),
       variables: {
         slug: "deborah-haynes",
         first: 3,
@@ -63,7 +63,7 @@ const mocks = [
   },
   {
     request: {
-      query: addTypenameToDocument(articleListQuery),
+      query: addTypenameToDocument(articleListWithImagesQuery),
       variables: {
         slug: "deborah-haynes",
         first: 3,
@@ -75,7 +75,7 @@ const mocks = [
   },
   {
     request: {
-      query: addTypenameToDocument(articleListQuery),
+      query: addTypenameToDocument(articleListWithImagesQuery),
       variables: {
         slug: "deborah-haynes",
         first: 3,

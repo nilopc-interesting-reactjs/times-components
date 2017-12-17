@@ -2,7 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import AuthorHead from "@times-components/author-head";
 import { withPageState } from "@times-components/pagination";
-import { ArticleListProvider } from "@times-components/provider";
+import {
+  AuthorArticlesNoImagesProvider,
+  AuthorArticlesWithImagesProvider
+} from "@times-components/provider";
 import { withTrackingContext } from "@times-components/tracking";
 import get from "lodash.get";
 import AuthorProfileError from "./author-profile-error";
