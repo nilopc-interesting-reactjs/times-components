@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { View } from "react-native";
-import ArticleSummary from "@times-components/article-summary";
 import Image from "@times-components/image";
 import Loading from "./card-loading";
 import {
@@ -22,17 +21,12 @@ class CardComponent extends React.Component {
   render() {
     const {
       isLoading,
-      date,
-      headline,
       image,
-      label,
-      publication,
-      style,
-      shortText,
-      longText,
       imageRatio,
       imageSize,
-      showImage
+      showImage,
+      style,
+      children
     } = this.props;
 
     if (isLoading) {
@@ -57,15 +51,7 @@ class CardComponent extends React.Component {
       <View>
         <CardContainer style={style}>
           {showImage ? imageComponent : null}
-          <SummaryContainer>
-            <ArticleSummary
-              label={label}
-              headline={headline}
-              text={shortImage}
-              date={date}
-              publication={publication}
-            />
-          </SummaryContainer>
+          <SummaryContainer>{children}</SummaryContainer>
         </CardContainer>
       </View>
     );
@@ -73,8 +59,7 @@ class CardComponent extends React.Component {
 }
 
 CardComponent.propTypes = {
-  image: PropTypes.shape({ uri: PropTypes.string }),
-  ...ArticleSummary.propTypes
+  image: PropTypes.shape({ uri: PropTypes.string })
 };
 
 CardComponent.defaultProps = {

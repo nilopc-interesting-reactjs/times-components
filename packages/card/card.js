@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { View, StyleSheet } from "react-native";
-import ArticleSummary from "@times-components/article-summary";
 import Image from "@times-components/image";
 import Loading from "./card-loading";
 
@@ -13,27 +12,23 @@ const styles = StyleSheet.create({
 
 class CardComponent extends React.Component {
   render() {
-    if (this.props.isLoading) {
+    const {
+      isLoading,
+      image,
+      imageRatio,
+      imageSize,
+      showImage,
+      style,
+      children
+    } = this.props;
+
+    if (isLoading) {
       return (
         <View>
-          <Loading aspectRatio={this.props.imageRatio} />
+          <Loading aspectRatio={imageRatio} />
         </View>
       );
     }
-
-    const {
-      date,
-      headline,
-      image,
-      label,
-      publication,
-      style,
-      shortText,
-      longText,
-      imageRatio,
-      imageSize,
-      showImage
-    } = this.props;
 
     const imageComponent =
       image && image.uri ? (
@@ -49,15 +44,7 @@ class CardComponent extends React.Component {
       <View onLayout={this.handleLayout}>
         <View style={style}>
           {showImage ? imageComponent : null}
-          <View>
-            <ArticleSummary
-              label={label}
-              headline={headline}
-              text={showImage ? shortText : longText}
-              date={date}
-              publication={publication}
-            />
-          </View>
+          <View>{children}</View>
         </View>
       </View>
     );
@@ -66,7 +53,6 @@ class CardComponent extends React.Component {
 
 CardComponent.propTypes = {
   image: PropTypes.shape({ uri: PropTypes.string }),
-  ...ArticleSummary.propTypes,
   isLoading: PropTypes.bool
 };
 
@@ -74,8 +60,7 @@ CardComponent.defaultProps = {
   image: {
     uri: ""
   },
-  isLoading: false,
-  ...ArticleSummary.defaultProps
+  isLoading: false
 };
 
 export default CardComponent;

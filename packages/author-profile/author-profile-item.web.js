@@ -1,10 +1,29 @@
-import React from "react";
+import React, { Fragment } from "react";
 import get from "lodash.get";
 import { StyleSheet, View } from "react-native";
 import Card from "@times-components/card";
 import Link from "@times-components/link";
 import { withTrackEvents } from "@times-components/tracking";
+import withResponsiveStyles from "@times-components/responsive-styles";
 import ArticleSummary from "@times-components/article-summary";
+
+const LongText = withResponsiveStyles(ArticleSummary, {
+  base: () => `
+    display: hidden
+  `,
+  mediumUp: () => `
+    display: block
+  `
+});
+
+const ShortText = withResponsiveStyles(ArticleSummary, {
+  base: () => `
+    display: block
+  `,
+  mediumUp: () => `
+    display: hidden
+  `
+});
 
 const styles = StyleSheet.create({
   container: {
@@ -18,6 +37,7 @@ const AuthorProfileItem = item => {
     style,
     summary,
     shortSummary,
+    longSummary,
     label,
     isLoading,
     onPress,
@@ -44,6 +64,22 @@ const AuthorProfileItem = item => {
     );
   }
 
+  const childProps = {
+    label,
+    headline,
+    date: publishedTime,
+    publication: publicationName
+  };
+
+  const children = showImage ? (
+    <ArticleSummary {...childProps} text={summary} />
+  ) : (
+    <Fragment>
+      <LongText {...childProps} text={longSummary} />
+      <ShortText {...childProps} text={shortSummary} />
+    </Fragment>
+  );
+
   return (
     <Link url={url} onPress={onPress}>
       <View style={[styles.container, style]}>
@@ -53,13 +89,7 @@ const AuthorProfileItem = item => {
           imageSize={imageSize}
           showImage={showImage}
         >
-          <ArticleSummary
-            label={label}
-            headline={headline}
-            text={showImage ? summary : shortSummary}
-            date={publishedTime}
-            publication={publicationName}
-          />
+          {children}
         </Card>
       </View>
     </Link>
