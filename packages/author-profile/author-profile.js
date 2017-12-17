@@ -2,12 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import AuthorHead from "@times-components/author-head";
 import { withPageState } from "@times-components/pagination";
-import {
-  AuthorArticlesNoImagesProvider,
-  AuthorArticlesWithImagesProvider
-} from "@times-components/provider";
+import { AuthorArticlesWithImagesProvider } from "@times-components/provider";
 import { withTrackingContext } from "@times-components/tracking";
 import get from "lodash.get";
+import AuthorArticlesNoImagesProvider from "./author-profile-list-provider";
 import AuthorProfileError from "./author-profile-error";
 import AuthorProfileContent from "./author-profile-content";
 
@@ -34,11 +32,23 @@ const AuthorProfile = ({
     return <AuthorProfileError {...error} />;
   }
 
-  const { biography, name, image: uri, jobTitle, twitter, articles } =
+  const {
+    biography,
+    name,
+    image: uri,
+    jobTitle,
+    twitter,
+    hasLeadAssets,
+    articles
+  } =
     author || {};
 
+  const SelectedProvider = hasLeadAssets
+    ? AuthorArticlesWithImagesProvider
+    : AuthorArticlesNoImagesProvider;
+
   return (
-    <ArticleListProvider
+    <SelectedProvider
       articleImageRatio="3:2"
       slug={slug}
       page={page}
@@ -75,13 +85,14 @@ const AuthorProfile = ({
             page={page}
             pageSize={pageSize}
             imageRatio={ratioTextToFloat(imageRatio)}
+            showImages={hasLeadAssets}
             articlesLoading={articlesLoading}
             articles={articlesWithPublishTime}
             onArticlePress={onArticlePress}
           />
         );
       }}
-    </ArticleListProvider>
+    </SelectedProvider>
   );
 };
 

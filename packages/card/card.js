@@ -28,9 +28,11 @@ class CardComponent extends React.Component {
       label,
       publication,
       style,
-      text,
+      shortText,
+      longText,
       imageRatio,
-      imageSize
+      imageSize,
+      showImage
     } = this.props;
 
     const imageComponent =
@@ -46,12 +48,12 @@ class CardComponent extends React.Component {
     return (
       <View onLayout={this.handleLayout}>
         <View style={style}>
-          {imageComponent}
+          {showImage ? imageComponent : null}
           <View>
             <ArticleSummary
               label={label}
               headline={headline}
-              text={text}
+              text={showImage ? shortText : longText}
               date={date}
               publication={publication}
             />

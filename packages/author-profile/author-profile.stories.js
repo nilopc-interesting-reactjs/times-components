@@ -20,13 +20,27 @@ const preventDefaultedAction = decorateAction([
   }
 ]);
 
-const makeAuthor = articleCount => ({
-  ...authorProfileFixture.data.author,
-  articles: {
-    count: articleCount,
-    __typename: "Articles"
+const makeAuthor = (articleCount, { withImages } = {}) => {
+  if (withImages) {
+    return {
+      ...authorProfileFixture.data.author,
+      hasLeadAssets: true,
+      articles: {
+        count: articleCount,
+        __typename: "Articles"
+      }
+    };
   }
-});
+
+  return {
+    ...authorProfileFixture.data.author,
+    hasLeadAssets: false,
+    articles: {
+      count: articleCount,
+      __typename: "Articles"
+    }
+  };
+};
 
 const articlesList = (skip, first, transform = id => id) => ({
   data: {
@@ -189,7 +203,22 @@ const authProfileProvider = withMockProvider(
 );
 
 storiesOf("AuthorProfile", module)
-  .add("Default", () => {
+  .add("Default with images", () => {
+    const props = {
+      slug: "deborah-haynes",
+      author: makeAuthor(20, { withImages: true }),
+      articleImageRatio: "3:2",
+      isLoading: false,
+      page: 2,
+      pageSize: 5,
+      onTwitterLinkPress: preventDefaultedAction("onTwitterLinkPress"),
+      onArticlePress: preventDefaultedAction("onArticlePress"),
+      analyticsStream: storybookReporter
+    };
+
+    return withMockProvider(<AuthorProfile {...props} />);
+  })
+  .add("Default without images", () => {
     const props = {
       slug: "deborah-haynes",
       author: makeAuthor(20),

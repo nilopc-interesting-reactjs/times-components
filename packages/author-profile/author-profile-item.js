@@ -16,6 +16,8 @@ const AuthorProfileItem = item => {
   const {
     style,
     summary,
+    shortSummary,
+    longSummary,
     label,
     isLoading,
     onPress,
@@ -24,7 +26,8 @@ const AuthorProfileItem = item => {
     headline,
     url,
     imageRatio,
-    imageSize
+    imageSize,
+    showImage
   } = item;
 
   const imageUri = get(
@@ -46,10 +49,12 @@ const AuthorProfileItem = item => {
       <View style={[styles.container, style]}>
         <Card
           headline={headline}
-          text={summary}
+          shortText={shortSummary || summary}
+          longText={longSummary || summary}
           image={imageUri ? { uri: imageUri } : null}
           imageRatio={imageRatio}
           imageSize={imageSize}
+          showImage={showImage}
           date={publishedTime}
           label={label}
           publication={publicationName}

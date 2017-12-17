@@ -139,6 +139,7 @@ class AuthorProfileContent extends Component {
       twitter,
       uri,
       imageRatio,
+      showImages,
       receiveChildList
     } = this.props;
 
@@ -202,6 +203,7 @@ class AuthorProfileContent extends Component {
                               {...article}
                               imageRatio={imageRatio}
                               imageSize={this.getImageSize(article.elementId)}
+                              showImage={showImages}
                               onPress={e => onArticlePress(e, { id, url })}
                             />
                           </Fragment>
