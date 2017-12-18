@@ -7,24 +7,14 @@ import { withTrackEvents } from "@times-components/tracking";
 import withResponsiveStyles from "@times-components/responsive-styles";
 import ArticleSummary from "@times-components/article-summary";
 
-const LongText = withResponsiveStyles(ArticleSummary, {
-  base: () => `
-    display: none,
-    color: red
-  `,
-  mediumUp: () => `
-    display: block
-  `
+const LongText = withResponsiveStyles(View, {
+  base: () => "display: none;",
+  mediumUp: () => "display: block;"
 });
 
-const ShortText = withResponsiveStyles(ArticleSummary, {
-  base: () => `
-    display: block,
-    color: blue
-  `,
-  mediumUp: () => `
-    display: none
-  `
+const ShortText = withResponsiveStyles(View, {
+  base: () => "display: block;",
+  mediumUp: () => "display: none;"
 });
 
 const styles = StyleSheet.create({
@@ -77,8 +67,8 @@ const AuthorProfileItem = item => {
     <ArticleSummary {...childProps} text={summary} />
   ) : (
     <Fragment>
-      <LongText {...childProps} text={longSummary} />
-      <ShortText {...childProps} text={shortSummary} />
+      <LongText><ArticleSummary {...childProps} text={longSummary} /></LongText>
+      <ShortText><ArticleSummary {...childProps} text={shortSummary} /></ShortText>
     </Fragment>
   );
 
