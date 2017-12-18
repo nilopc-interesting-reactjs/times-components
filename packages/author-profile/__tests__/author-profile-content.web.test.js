@@ -6,7 +6,7 @@ import test from "./author-profile-helper";
 import AuthorProfileItem from "../author-profile-item";
 import AuthorProfileContent from "../author-profile-content.web.js";
 import authorProfileFixture from "../fixtures/author-profile.json";
-import articleListFixture from "../fixtures/article-list.json";
+import articleListWithImagesFixture from "../fixtures/article-list-with-images.json";
 import pagedResult from "./paged-result";
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
@@ -16,13 +16,15 @@ test(AuthorProfileContent);
 const results = {
   data: {
     author: {
-      ...articleListFixture.data.author,
+      ...articleListWithImagesFixture.data.author,
       articles: {
-        ...articleListFixture.data.author.articles,
-        list: articleListFixture.data.author.articles.list.map(el => ({
-          ...el,
-          publishedTime: new Date(el.publishedTime)
-        }))
+        ...articleListWithImagesFixture.data.author.articles,
+        list: articleListWithImagesFixture.data.author.articles.list.map(
+          el => ({
+            ...el,
+            publishedTime: new Date(el.publishedTime)
+          })
+        )
       }
     }
   }
