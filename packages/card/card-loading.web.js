@@ -20,10 +20,10 @@ const gradientStyles = StyleSheet.create({
   }
 });
 
-const Loading = ({ imageRatio, showImage }) => {
+const Loading = ({ aspectRatio, showImage }) => {
   const imageComponent = (
     <ImageContainer>
-      <Image uri="" aspectRatio={imageRatio} />
+      <Image uri="" aspectRatio={aspectRatio} />
     </ImageContainer>
   );
 
@@ -44,11 +44,13 @@ const Loading = ({ imageRatio, showImage }) => {
 };
 
 Loading.defaultProps = {
-  imageRatio: 3 / 2
+  aspectRatio: 3 / 2,
+  showImage: PropTypes.bool
 };
 
 Loading.propTypes = {
-  imageRatio: PropTypes.number
+  aspectRatio: PropTypes.number,
+  showImage: PropTypes.bool
 };
 
 export default Loading;

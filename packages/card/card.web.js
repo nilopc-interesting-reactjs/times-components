@@ -25,7 +25,6 @@ class CardComponent extends React.Component {
       imageRatio,
       imageSize,
       showImage,
-      style,
       children
     } = this.props;
 
@@ -49,7 +48,7 @@ class CardComponent extends React.Component {
 
     return (
       <View>
-        <CardContainer style={style}>
+        <CardContainer>
           {showImage ? imageComponent : null}
           <SummaryContainer>{children}</SummaryContainer>
         </CardContainer>
@@ -59,13 +58,23 @@ class CardComponent extends React.Component {
 }
 
 CardComponent.propTypes = {
-  image: PropTypes.shape({ uri: PropTypes.string })
+  image: PropTypes.shape({ uri: PropTypes.string }),
+  imageRatio: PropTypes.number,
+  imageSize: PropTypes.number,
+  showImage: PropTypes.bool,
+  children: PropTypes.node,
+  isLoading: PropTypes.bool
 };
 
 CardComponent.defaultProps = {
   image: {
     uri: ""
-  }
+  },
+  imageRatio: 1,
+  imageSize: 100,
+  showImage: false,
+  children: [],
+  isLoading: false
 };
 
 export default CardComponent;

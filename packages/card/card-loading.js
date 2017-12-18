@@ -49,11 +49,13 @@ const Loading = ({ aspectRatio, showImage }) => {
 };
 
 Loading.defaultProps = {
-  aspectRatio: 3 / 2
+  aspectRatio: 3 / 2,
+  showImage: false
 };
 
 Loading.propTypes = {
-  aspectRatio: PropTypes.number
+  aspectRatio: PropTypes.number,
+  showImage: PropTypes.bool
 };
 
 export default Loading;

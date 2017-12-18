@@ -4,6 +4,8 @@ import { View, StyleSheet } from "react-native";
 import Image from "@times-components/image";
 import Loading from "./card-loading";
 
+const { style: ViewPropTypesStyle } = View.propTypes;
+
 const styles = StyleSheet.create({
   imageContainer: {
     marginBottom: 10
@@ -53,6 +55,11 @@ class CardComponent extends React.Component {
 
 CardComponent.propTypes = {
   image: PropTypes.shape({ uri: PropTypes.string }),
+  imageRatio: PropTypes.number,
+  imageSize: PropTypes.number,
+  showImage: PropTypes.bool,
+  style: ViewPropTypesStyle,
+  children: PropTypes.node,
   isLoading: PropTypes.bool
 };
 
@@ -60,6 +67,11 @@ CardComponent.defaultProps = {
   image: {
     uri: ""
   },
+  imageRatio: 1,
+  imageSize: 100,
+  showImage: false,
+  style: null,
+  children: [],
   isLoading: false
 };
 
