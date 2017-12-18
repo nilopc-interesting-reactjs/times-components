@@ -62,7 +62,7 @@ const AuthorProfile = ({
         author: data,
         pageSize,
         isLoading: articlesLoading,
-        variables: { imageRatio="3:2" }
+        variables: { imageRatio = "3:2" }
       }) => {
         const articlesWithPublishTime = get(data, "articles.list", []).map(
           article => ({

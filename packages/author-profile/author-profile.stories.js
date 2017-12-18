@@ -157,7 +157,7 @@ const makeBrokenMocks = ({ count = 5, withImages }) => {
           imageRatio: "3:2"
         }
       },
-      result: articlesList(0, 5, list =>
+      result: articlesList({ skip: 0, first: 5, withImages }, list =>
         list.map((card, indx) => ({
           ...card,
           summary: [
