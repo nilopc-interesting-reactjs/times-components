@@ -11,9 +11,9 @@ import {
 
 class CardComponent extends React.Component {
   shouldComponentUpdate(nextProps) {
-    const { image: { uri }, imageSize, isLoading } = this.props;
+    const { image, imageSize, isLoading } = this.props;
     return (
-      uri !== nextProps.image.uri ||
+      (image && image.uri !== nextProps.image.uri) ||
       imageSize !== nextProps.imageSize ||
       isLoading !== nextProps.isLoading
     );

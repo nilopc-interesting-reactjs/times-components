@@ -9,7 +9,8 @@ import ArticleSummary from "@times-components/article-summary";
 
 const LongText = withResponsiveStyles(ArticleSummary, {
   base: () => `
-    display: hidden
+    display: none,
+    color: red
   `,
   mediumUp: () => `
     display: block
@@ -18,10 +19,11 @@ const LongText = withResponsiveStyles(ArticleSummary, {
 
 const ShortText = withResponsiveStyles(ArticleSummary, {
   base: () => `
-    display: block
+    display: block,
+    color: blue
   `,
   mediumUp: () => `
-    display: hidden
+    display: none
   `
 });
 

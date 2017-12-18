@@ -10,6 +10,10 @@ import AuthorProfileError from "./author-profile-error";
 import AuthorProfileContent from "./author-profile-content";
 
 const ratioTextToFloat = s => {
+  if (!s || !s.length) {
+    return 1;
+  }
+
   const [w, h] = s.split(":");
   const ratio = parseFloat(w) / parseFloat(h);
 
