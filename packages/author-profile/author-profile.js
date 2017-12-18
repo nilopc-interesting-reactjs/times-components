@@ -36,6 +36,18 @@ const AuthorProfile = ({
     return <AuthorProfileError {...error} />;
   }
 
+  if (isLoading) {
+    return (
+      <AuthorProfileContent
+        isLoading={isLoading}
+        pageSize={initPageSize}
+        imageRatio={ratioTextToFloat("3:2")}
+        articlesLoading
+        onTwitterLinkPress={() => {}}
+      />
+    );
+  }
+
   const {
     biography,
     name,

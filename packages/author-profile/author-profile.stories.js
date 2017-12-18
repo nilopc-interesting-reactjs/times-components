@@ -278,7 +278,7 @@ storiesOf("AuthorProfile", module)
         <AuthorProfileProvider slug={props.slug}>
           {({ author, isLoading, error }) => (
             <AuthorProfile
-              {...author}
+              author={author}
               isLoading={isLoading}
               error={error}
               {...props}
