@@ -27,6 +27,15 @@ const props = {
   analyticsStream: () => {}
 };
 
+const makeAuthor = ({ withImages }) => ({
+  data: {
+    author: {
+      ...authorProfileFixture,
+      hasLeadAssets: withImages
+    }
+  }
+})
+
 const mocks = [
   {
     request: {
@@ -35,7 +44,7 @@ const mocks = [
         slug: "deborah-haynes"
       }
     },
-    result: authorProfileFixture
+    result: makeAuthor({withImages: true})
   },
   {
     request: {
@@ -116,7 +125,8 @@ export default AuthorProfileContent => {
   it("renders profile loading", () => {
     const p = {
       ...props,
-      ...authorProfileFixture.data.author,
+      ...makeAuthor({ withImages: true }).data.author,
+      showImages: true,
       articlesLoading: true,
       articles: Array(3)
         .fill()
@@ -133,7 +143,6 @@ export default AuthorProfileContent => {
 
   it("renders profile empty", () => {
     const p = Object.assign({}, props, {
-      slug: "deborah-haynes",
       author: null,
       isLoading: false,
       imageRatio: 16 / 9
@@ -198,13 +207,12 @@ export default AuthorProfileContent => {
     const results = pagedResult(0, 3);
     const component = renderer.create(
       <AuthorProfileContent
-        count={10}
+        {...makeAuthor({ withImages: true }).data.author}
         articles={results.data.author.articles.list}
-        author={authorProfileFixture.data.author}
-        slug="deborah-haynes"
         page={1}
         pageSize={3}
         imageRatio={3 / 2}
+        showImages
         onTwitterLinkPress={() => {}}
         onArticlePress={() => {}}
         onViewed={() => {}}
@@ -386,7 +394,8 @@ export default AuthorProfileContent => {
 
     const p = {
       ...props,
-      ...authorProfileFixture.data.author,
+        ...makeAuthor({ withImages: true }),
+      showImages: true,
       articlesLoading: false,
       articles: [
         makeArticleWithSummary("d98c257c-cb16-11e7-b529-95e3fc05f40f", {
