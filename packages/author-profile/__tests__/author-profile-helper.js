@@ -34,7 +34,7 @@ const makeAuthor = ({ withImages }) => ({
       hasLeadAssets: withImages
     }
   }
-})
+});
 
 const mocks = [
   {
@@ -44,7 +44,7 @@ const mocks = [
         slug: "deborah-haynes"
       }
     },
-    result: makeAuthor({withImages: true})
+    result: makeAuthor({ withImages: true })
   },
   {
     request: {
@@ -394,7 +394,7 @@ export default AuthorProfileContent => {
 
     const p = {
       ...props,
-        ...makeAuthor({ withImages: true }),
+      ...makeAuthor({ withImages: true }),
       showImages: true,
       articlesLoading: false,
       articles: [

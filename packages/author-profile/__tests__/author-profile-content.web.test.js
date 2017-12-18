@@ -16,7 +16,6 @@ test(AuthorProfileContent);
 const results = {
   data: {
     author: {
-      ...articleListWithImagesFixture.data.author,
       articles: {
         ...articleListWithImagesFixture.data.author.articles,
         list: articleListWithImagesFixture.data.author.articles.list.map(
@@ -29,6 +28,12 @@ const results = {
     }
   }
 };
+
+const makeAuthor = ({ withImages }) => ({
+  ...authorProfileFixture.data.author,
+  hasLeadAssets: withImages,
+  showImages: true
+});
 
 const intersectionObserverInstances = [];
 class FakeIntersectionObserver {
@@ -63,9 +68,8 @@ afterEach(() => {
 it("renders profile articles and invoke callback on article press", done => {
   const component = shallow(
     <AuthorProfileContent
+      {...makeAuthor({ withImages: true })}
       articles={results.data.author.articles.list}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
@@ -101,9 +105,8 @@ it("renders with an intersection observer which uses the expected options", () =
 
   mount(
     <AuthorProfileContent
+      {...makeAuthor({ withImages: true })}
       articles={results.data.author.articles.list}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
@@ -120,9 +123,8 @@ it("renders a good quality image if it is visible", async () => {
 
   const component = mount(
     <AuthorProfileContent
+      {...makeAuthor({ withImages: true })}
       articles={results.data.author.articles.list}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
@@ -164,9 +166,8 @@ it("renders a poor quality image if it is not visible", async () => {
 
   const component = mount(
     <AuthorProfileContent
+      {...makeAuthor({ withImages: true })}
       articles={results.data.author.articles.list}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
@@ -196,9 +197,8 @@ it("renders a poor quality image if it is not visible", async () => {
 it("renders good quality images if there is no IntersectionObserver", () => {
   const component = mount(
     <AuthorProfileContent
+      {...makeAuthor({ withImage: true })}
       articles={results.data.author.articles.list.slice(0, 2)}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
@@ -240,9 +240,8 @@ it("does not render good quality images if the item is quickly scrolled passed",
 
   const component = mount(
     <AuthorProfileContent
+      {...makeAuthor({ withImages: true })}
       articles={results.data.author.articles.list.slice(0, 5)}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
@@ -279,9 +278,8 @@ it("does no work if there are no pending items", async () => {
 
   mount(
     <AuthorProfileContent
+      {...makeAuthor({ withImages: true })}
       articles={results.data.author.articles.list.slice(0, 5)}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
@@ -323,9 +321,8 @@ it("does not set state after unmounting", async () => {
 
   const component = mount(
     <AuthorProfileContent
+      {...makeAuthor({ withImages: true })}
       articles={results.data.author.articles.list.slice(0, 5)}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
@@ -371,9 +368,8 @@ it("disconnects from the IntersectionObserver when unmounting", async () => {
 
   const component = mount(
     <AuthorProfileContent
+      {...makeAuthor({ withImages: true })}
       articles={results.data.author.articles.list.slice(0, 5)}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
@@ -394,9 +390,8 @@ it("does not throw when unmounting with no IntersectionObserver", async () => {
 
   const component = mount(
     <AuthorProfileContent
+      {...makeAuthor({ withImages: true })}
       articles={results.data.author.articles.list.slice(0, 5)}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
@@ -418,10 +413,8 @@ it("emits scroll tracking events for author profile content", () => {
 
   mount(
     <AuthorProfileContent
-      count={10}
+      {...makeAuthor({ withImages: true })}
       articles={pageResults.data.author.articles.list}
-      author={authorProfileFixture.data.author}
-      slug="deborah-haynes"
       page={1}
       pageSize={3}
       imageRatio={3 / 2}
