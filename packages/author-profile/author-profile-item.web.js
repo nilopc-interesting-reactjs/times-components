@@ -67,8 +67,12 @@ const AuthorProfileItem = item => {
     <ArticleSummary {...childProps} text={summary} />
   ) : (
     <Fragment>
-      <LongText><ArticleSummary {...childProps} text={longSummary} /></LongText>
-      <ShortText><ArticleSummary {...childProps} text={shortSummary} /></ShortText>
+      <LongText>
+        <ArticleSummary {...childProps} text={longSummary} />
+      </LongText>
+      <ShortText>
+        <ArticleSummary {...childProps} text={shortSummary} />
+      </ShortText>
     </Fragment>
   );
 

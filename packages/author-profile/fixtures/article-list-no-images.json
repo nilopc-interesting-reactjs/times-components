@@ -14,7 +14,21 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "The special forces dog fought on under fire, even after shrapnel from Taliban grenades tore into his belly and legs, blew out a front tooth and"
+                        "The special forces dog fought on under fire, even after shrapnel from Taliban grenades tore into his belly and legs, blew out a front tooth and damaged his right ear."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value":
+                        "Mali sniffed out explosives and insurgents during a"
                     },
                     "children": []
                   }
@@ -57,7 +71,21 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "The head of the United Nations has added his voice to calls for Facebook, YouTube, Microsoft and Twitter to help to stop the spread of terrorist"
+                        "The head of the United Nations has added his voice to calls for Facebook, YouTube, Microsoft and Twitter to help to stop the spread of terrorist material online."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value":
+                        "Ant\u00f3nio Guterres said last night that Islamic State and"
                     },
                     "children": []
                   }
@@ -100,7 +128,20 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "Britain\u2019s cash-strapped army is 20 years out of date and would be incapable of surviving Russian artillery and air strikes in a conflict, a"
+                        "Britain\u2019s cash-strapped army is 20 years out of date and would be incapable of surviving Russian artillery and air strikes in a conflict, a former military chief said today."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value": "General Sir Richard Barrons, the commander of"
                     },
                     "children": []
                   }
@@ -143,7 +184,20 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "Britain\u2019s new defence secretary is facing questions over why his department has hired hundreds of civilians while it considers cutting 1,000"
+                        "Britain\u2019s new defence secretary is facing questions over why his department has hired hundreds of civilians while it considers cutting 1,000 frontline Royal Marines to save money."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value": "Ruth Smeeth, a Labour member of the"
                     },
                     "children": []
                   }
@@ -200,7 +254,8 @@
                   {
                     "name": "text",
                     "attributes": {
-                      "value": "But when a group of"
+                      "value":
+                        "But when a group of Royal Navy sailors asked the Royal British Legion (RBL) to produce adult"
                     },
                     "children": []
                   }
@@ -258,7 +313,21 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "The defence secretary will hold his first bilateral meeting in London today with James Mattis, his US counterpart, amid concerns over impending"
+                        "The defence secretary will hold his first bilateral meeting in London today with James Mattis, his US counterpart, amid concerns over impending cuts to the armed forces."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value":
+                        "It will be the second big test for Gavin Williamson"
                     },
                     "children": []
                   }
@@ -301,7 +370,21 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "A leading US general warned yesterday against cost cuts to Britain\u2019s armed forces as the new defence secretary made his first outing on the world"
+                        "A leading US general warned yesterday against cost cuts to Britain\u2019s armed forces as the new defence secretary made his first outing on the world stage."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value":
+                        "Gavin Williamson joined defence ministers from 28 other member"
                     },
                     "children": []
                   }
@@ -344,7 +427,20 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "Britain\u2019s air war against Islamic State is set to wind down next year, with commanders looking at bringing Royal Air Force fast jets home from"
+                        "Britain\u2019s air war against Islamic State is set to wind down next year, with commanders looking at bringing Royal Air Force fast jets home from March, a senior officer said yesterday."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value": "Air Commodore Johnny Stringer, who led"
                     },
                     "children": []
                   }
@@ -399,7 +495,8 @@
                   {
                     "name": "text",
                     "attributes": {
-                      "value": "Mrs"
+                      "value":
+                        "Mrs Leadsom, the Commons leader, was said to have handed over a dossier of"
                     },
                     "children": []
                   }
@@ -455,7 +552,21 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "Shock and curiosity were the prevailing sentiments at the Ministry of Defence yesterday after Gavin Williamson was named the new secretary of"
+                        "Shock and curiosity were the prevailing sentiments at the Ministry of Defence yesterday after Gavin Williamson was named the new secretary of state."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value":
+                        "\u201cGavin who?\u201d said several insiders as the former chief whip\u2019s name"
                     },
                     "children": []
                   }
@@ -510,7 +621,8 @@
                   {
                     "name": "text",
                     "attributes": {
-                      "value": "The sexual"
+                      "value":
+                        "The sexual harassment scandal engulfing Westminster claimed its first cabinet casualty"
                     },
                     "children": []
                   }
@@ -579,7 +691,7 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "It would mark the moment he became the longest-serving Conservative defence"
+                        "It would mark the moment he became the longest-serving Conservative defence secretary in history \u2014 a point that the senior minister had been known to mention"
                     },
                     "children": []
                   }
@@ -636,7 +748,21 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "Defence chiefs are considering scrapping a special allowance given to soldiers serving in Iraq, provoking anger from troops, military sources"
+                        "Defence chiefs are considering scrapping a special allowance given to soldiers serving in Iraq, provoking anger from troops, military sources said last night."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value":
+                        "The move would save \u00a36 million a year but would be a blow to"
                     },
                     "children": []
                   }
@@ -679,7 +805,20 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "The need to scavenge parts from warships and submarines to keep the rest of the Royal Navy\u2019s frontline fleet running has jumped by almost 50 per"
+                        "The need to scavenge parts from warships and submarines to keep the rest of the Royal Navy\u2019s frontline fleet running has jumped by almost 50 per cent in five years, it is revealed today."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value": "The rise in \u201ccannibalisation\u201d or"
                     },
                     "children": []
                   }
@@ -721,7 +860,20 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "Britain\u2019s ability to support Nato operations will be damaged if military chiefs scrap their only two amphibious assault ships to save money"
+                        "Britain\u2019s ability to support Nato operations will be damaged if military chiefs scrap their only two amphibious assault ships to save money, Whitehall sources warned last night."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value": "Bilateral partnerships and accords with"
                     },
                     "children": []
                   }
@@ -764,7 +916,21 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "The estimated lifetime cost to operate and support the world\u2019s most expensive warplane has risen by almost a quarter in four years, a US spending"
+                        "The estimated lifetime cost to operate and support the world\u2019s most expensive warplane has risen by almost a quarter in four years, a US spending watchdog has found."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value":
+                        "The figures on the US fleet of F-35 Lighting II, from"
                     },
                     "children": []
                   }
@@ -806,7 +972,40 @@
                     "name": "text",
                     "attributes": {
                       "value":
-                        "Military chiefs must find an extra \u00a3300 million in savings this year to cover a rise in the cost of Britain\u2019s replacement fleet of Trident"
+                        "Military chiefs must find an extra \u00a3300 million in savings this year to cover a rise in the cost of Britain\u2019s replacement fleet of Trident submarines, "
+                    },
+                    "children": []
+                  },
+                  {
+                    "name": "italic",
+                    "attributes": {},
+                    "children": [
+                      {
+                        "name": "text",
+                        "attributes": {
+                          "value": "The Times "
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value": "can reveal."
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "paragraph",
+                "attributes": {},
+                "children": [
+                  {
+                    "name": "text",
+                    "attributes": {
+                      "value": "The army is set to take a hit, with commanders"
                     },
                     "children": []
                   }
@@ -861,7 +1060,8 @@
                   {
                     "name": "text",
                     "attributes": {
-                      "value": "Military chiefs met yesterday to"
+                      "value":
+                        "Military chiefs met yesterday to discuss a new round of cuts as they grapple with a gap in funding of \u00a320"
                     },
                     "children": []
                   }
@@ -929,7 +1129,8 @@
                   {
                     "name": "text",
                     "attributes": {
-                      "value": "He"
+                      "value":
+                        "Britain is pushing for a multibillion-pound contract with Saudi Arabia for"
                     },
                     "children": []
                   }
@@ -997,7 +1198,8 @@
                   {
                     "name": "text",
                     "attributes": {
-                      "value": "Colonel"
+                      "value":
+                        "Colonel Dan Sullivan said that a possible cut of 1,000 Royal Marines and the loss"
                     },
                     "children": []
                   }
