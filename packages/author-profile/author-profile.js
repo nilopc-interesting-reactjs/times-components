@@ -40,6 +40,7 @@ const AuthorProfile = ({
     return (
       <AuthorProfileContent
         isLoading={isLoading}
+        showImages
         pageSize={initPageSize}
         imageRatio={ratioTextToFloat("3:2")}
         articlesLoading

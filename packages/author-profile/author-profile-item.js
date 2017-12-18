@@ -39,7 +39,11 @@ const AuthorProfileItem = item => {
   if (isLoading) {
     return (
       <View style={[styles.container, style]}>
-        <Card isLoading={isLoading} imageRatio={imageRatio} />
+        <Card
+          isLoading={isLoading}
+          imageRatio={imageRatio}
+          showImage={showImage}
+        />
       </View>
     );
   }
