@@ -255,7 +255,7 @@ storiesOf("AuthorProfile", module)
     const props = {
       slug: "deborah-haynes",
       page: 2,
-      pageSize: 3,
+      pageSize: 5,
       onTwitterLinkPress: preventDefaultedAction("onTwitterLinkPress"),
       onArticlePress: preventDefaultedAction("onArticlePress"),
       analyticsStream: storybookReporter
