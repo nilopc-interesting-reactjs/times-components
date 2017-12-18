@@ -32,7 +32,7 @@ class CardComponent extends React.Component {
     if (isLoading) {
       return (
         <View>
-          <Loading imageRatio={imageRatio} />
+          <Loading imageRatio={imageRatio} showImage={showImage} />
         </View>
       );
     }
