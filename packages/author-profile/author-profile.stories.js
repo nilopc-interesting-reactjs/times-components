@@ -94,7 +94,13 @@ const makeMocks = ({ count = 20, withImages } = {}) => {
           slug: "deborah-haynes"
         }
       },
-      result: makeAuthor(count, { withImages })
+      result: {
+        data: {
+          author: {
+            ...makeAuthor(count, { withImages })
+          }
+        }
+      }
     },
     {
       delay,
@@ -144,7 +150,13 @@ const makeBrokenMocks = ({ count = 5, withImages }) => {
           slug: "deborah-haynes"
         }
       },
-      result: makeAuthor(count, { withImages })
+      result: {
+        data: {
+          author: {
+            ...makeAuthor(count, { withImages })
+          }
+        }
+      }
     },
     {
       delay,
