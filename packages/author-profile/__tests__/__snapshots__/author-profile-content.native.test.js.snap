@@ -3510,6 +3510,7 @@ exports[`renders profile content component 1`] = `
                       allowFontScaling={true}
                       ellipsizeMode="tail"
                     >
+                      
                       The special forces dog fought on under fire, even after shrapnel from Taliban grenades tore into his belly and legs, blew out a front tooth and
                       ...
                     </Text>
@@ -3759,6 +3760,7 @@ exports[`renders profile content component 1`] = `
                       allowFontScaling={true}
                       ellipsizeMode="tail"
                     >
+                      
                       The head of the United Nations has added his voice to calls for Facebook, YouTube, Microsoft and Twitter to help to stop the spread of terrorist
                       ...
                     </Text>
@@ -4008,6 +4010,7 @@ exports[`renders profile content component 1`] = `
                       allowFontScaling={true}
                       ellipsizeMode="tail"
                     >
+                      
                       Britain’s cash-strapped army is 20 years out of date and would be incapable of surviving Russian artillery and air strikes in a conflict, a
                       ...
                     </Text>
