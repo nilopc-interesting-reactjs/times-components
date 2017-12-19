@@ -25,7 +25,7 @@ storiesOf("Card", module)
     </Card>
   ))
   .add("Default", () => (
-    <Card>
+    <Card {...cardProps}>
       <ArticleSummary {...articleSummaryProps} />
     </Card>
   ))
