@@ -30,16 +30,28 @@ const connectGraphql = (query, propsToVariables = identity) => {
     }
 
     refetch() {
-      this.state.data.refetch().then(response => {
-        this.setState(prevState => ({
-          ...prevState,
-          data: {
-            ...prevState.data,
-            ...response.data,
-            error: response.errors
-          }
-        }));
-      });
+      this.state.data.refetch().then(
+        response => {
+          this.setState(prevState => ({
+            ...prevState,
+            data: {
+              ...prevState.data,
+              ...response.data,
+              error: null
+            }
+          }));
+        },
+        error => {
+          this.setState(prevState => ({
+            ...prevState,
+            data: {
+              refetch: prevState.data.refetch,
+              loading: false,
+              error
+            }
+          }));
+        }
+      );
     }
 
     render() {
