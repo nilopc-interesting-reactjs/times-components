@@ -7,7 +7,7 @@ export default (Link, TextLink, Text) => {
   describe("Link", () => {
     it("renders correctly", () => {
       const tree = renderer
-        .create(<Link url="http://thetimes.co.uk" onPress={() => {}} />)
+        .create(<Link url="http://thetimes.co.uk" onPress={() => {}}>The Times</Link>)
         .toJSON();
 
       expect(tree).toMatchSnapshot();
