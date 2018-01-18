@@ -2335,22 +2335,6 @@ exports[`renders profile content component 1`] = `
                     style={
                       Object {
                         "color": "#333333",
-                        "fontFamily": "GillSansMTStd-Medium",
-                        "fontSize": 12,
-                        "letterSpacing": 1,
-                        "marginBottom": 2,
-                      }
-                    }
-                  >
-                    
-                  </Text>
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "#333333",
                         "fontFamily": "TimesModern-Bold",
                         "fontSize": 22,
                         "fontWeight": "400",
@@ -2586,22 +2570,6 @@ exports[`renders profile content component 1`] = `
                     style={
                       Object {
                         "color": "#333333",
-                        "fontFamily": "GillSansMTStd-Medium",
-                        "fontSize": 12,
-                        "letterSpacing": 1,
-                        "marginBottom": 2,
-                      }
-                    }
-                  >
-                    
-                  </Text>
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "#333333",
                         "fontFamily": "TimesModern-Bold",
                         "fontSize": 22,
                         "fontWeight": "400",
@@ -2830,22 +2798,6 @@ exports[`renders profile content component 1`] = `
                 <View
                   style={Object {}}
                 >
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "#333333",
-                        "fontFamily": "GillSansMTStd-Medium",
-                        "fontSize": 12,
-                        "letterSpacing": 1,
-                        "marginBottom": 2,
-                      }
-                    }
-                  >
-                    
-                  </Text>
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -3345,22 +3297,6 @@ exports[`renders profile content item component 1`] = `
               style={
                 Object {
                   "color": "#333333",
-                  "fontFamily": "GillSansMTStd-Medium",
-                  "fontSize": 12,
-                  "letterSpacing": 1,
-                  "marginBottom": 2,
-                }
-              }
-            >
-              
-            </Text>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#333333",
                   "fontFamily": "TimesModern-Bold",
                   "fontSize": 22,
                   "fontWeight": "400",
@@ -3465,22 +3401,6 @@ exports[`renders profile content item component with a specific image size 1`] =
               style={
                 Object {
                   "color": "#333333",
-                  "fontFamily": "GillSansMTStd-Medium",
-                  "fontSize": 12,
-                  "letterSpacing": 1,
-                  "marginBottom": 2,
-                }
-              }
-            >
-              
-            </Text>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#333333",
                   "fontFamily": "TimesModern-Bold",
                   "fontSize": 22,
                   "fontWeight": "400",
@@ -3578,22 +3498,6 @@ exports[`renders profile content item component with no image 1`] = `
           <View
             style={Object {}}
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#333333",
-                  "fontFamily": "GillSansMTStd-Medium",
-                  "fontSize": 12,
-                  "letterSpacing": 1,
-                  "marginBottom": 2,
-                }
-              }
-            >
-              
-            </Text>
             <Text
               accessible={true}
               allowFontScaling={true}
