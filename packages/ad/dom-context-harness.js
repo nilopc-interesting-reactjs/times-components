@@ -1,10 +1,12 @@
 
-// this function is serialised to a string and executed in a webview,
+// NOTE: this function is serialised to a string and executed in a webview,
 // don't import any other modules or refer to variables defined outside of
-// the function body except for 'window'
+// the function body. Note that use of ES6 features like iteration and classes
+// will end up transpiling into code that uses helper functions like
+// _createClass, so keep this code ES5.
 
 
-const makeHarness = ({ el, init, data, scriptUris, globalNames }) => {
+const makeHarness = ({ document, window, el, init, data, scriptUris, globalNames }) => {
 
   window.onerror = function (e, x) {
     alert(e);
@@ -34,8 +36,12 @@ const makeHarness = ({ el, init, data, scriptUris, globalNames }) => {
           script.defer = true;
           document.head.appendChild(script);
         }
-        script.addEventListener("load", this.checkLoad.bind(this));
+        script.addEventListener("load", this.handleScriptLoad.bind(this));
       }
+    },
+
+    handleScriptLoad() {
+      this.checkLoad();
     },
 
     checkLoad() {

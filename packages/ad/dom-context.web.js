@@ -18,6 +18,8 @@ export default class DOMContext extends React.PureComponent {
     const harness = makeHarness({
       el: div,
       onError: this.onError,
+      window,
+      document,
       scriptUris,
       globalNames,
       init,
