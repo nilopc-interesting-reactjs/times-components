@@ -3,7 +3,7 @@ import React from "react";
 import { WebView, View } from "react-native";
 import PropTypes from "prop-types";
 
-import harness from "./dom-context-harness";
+import makeHarness from "./dom-context-harness";
 import {propTypes, defaultProps} from "./dom-context-prop-types";
 
 export default class DOMContext extends React.PureComponent {
@@ -18,17 +18,19 @@ export default class DOMContext extends React.PureComponent {
         <body>
           <div id="dom-context-element"></div>
           <script>
-            (${harness})({
+            var harness = (${makeHarness})({
               el: document.getElementById("dom-context-element"),
               init: ${init},
               data: ${JSON.stringify(data)},
               scriptUris: ${JSON.stringify(scriptUris)},
               globalNames: ${JSON.stringify(globalNames)}
             });
+            harness.execute();
           </script>
         </body>
       </html>
     `;
+    // console.log(html);
     return (
       <View
         style={{ width, height }}>

@@ -2,7 +2,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import harness from "./dom-context-harness";
+import makeHarness from "./dom-context-harness";
 import {propTypes, defaultProps} from "./dom-context-prop-types";
 
 export default class DOMContext extends React.PureComponent {
@@ -15,14 +15,16 @@ export default class DOMContext extends React.PureComponent {
       data
     } = this.props;
 
-    harness({
+    const harness = makeHarness({
       el: div,
       onError: this.onError,
       scriptUris,
       globalNames,
       init,
       data
-    })
+    });
+
+    harness.execute();
   }
 
   render() {
